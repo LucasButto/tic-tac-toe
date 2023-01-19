@@ -60,13 +60,20 @@ function App () {
 
   return (
     <main className='board'>
-      <button onClick={resetGame}>Reset del juego</button>
+      <section className='turn'>
+        <Square isSelected={turn === TURNS.X}>
+          {TURNS.X}
+        </Square>
+        <Square isSelected={turn === TURNS.O}>
+          {TURNS.O}
+        </Square>
+      </section>
       <section className='game'>
         {
           board.map((square, index) => {
             return (
               <Square
-                key={index}
+              key={index}
                 index={index}
                 updateBoard={updateBoard}
               >
@@ -77,16 +84,9 @@ function App () {
         }
       </section>
 
-      <section className='turn'>
-        <Square isSelected={turn === TURNS.X}>
-          {TURNS.X}
-        </Square>
-        <Square isSelected={turn === TURNS.O}>
-          {TURNS.O}
-        </Square>
-      </section>
 
       <WinnerModal resetGame={resetGame} winner={winner} />
+      <button onClick={resetGame}>Reset del juego</button>
     </main>
   )
 }
