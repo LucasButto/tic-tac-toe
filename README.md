@@ -34,3 +34,7 @@ This project is open-source and any contribution is welcome. To contribute, simp
 <p align="center">
   <img src="./src/img/proj.jpg" width="600" height="400">
 </p>
+
+## Test Project
+
+> https://lucasbutto.github.io/tic-tac-toe/
